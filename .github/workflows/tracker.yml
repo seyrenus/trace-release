@@ -17,12 +17,7 @@ jobs:
       env:
         GH_API_TOKEN: ${{ secrets.GH_API_TOKEN }}
       run: |
-        END_DATE=$(date +"%Y-%m-%d")
-        START_DATE=$(date -d "$END_DATE - 7 days" +"%Y-%m-%d")
-
-        echo "Checking releases from $START_DATE to $END_DATE..."
         # Initialize an empty array to hold all starred repositories
-      
         REPOS=()
         
         # Use a loop to paginate through all the results
@@ -43,33 +38,34 @@ jobs:
             ((page++))
         done
         
-        # Now loop through these repositories to check for releases
+        END_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+        START_DATE=$(date -u -d "7 days ago" +"%Y-%m-%dT%H:%M:%SZ")
+        
+        # Start creating the README.md with a title
+        echo "# Repositories with Latest Commits within 7 days" > README.md
+        echo "" >> README.md
+        
+        # Now loop through these repositories to get the last commit message
         for repo in "${REPOS[@]}"; do
-            echo "Checking releases for $repo..."
+            echo "Fetching last commit for $repo..."
             
-            # Fetch releases for the repo
-            releases=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/releases")
+            # Fetch the latest commit from the default branch
+            commit_info=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/commits/master")  # Assuming "master" is the default branch. Adjust if using "main" or another branch.
         
-            # Parse releases and check date
-            echo "$releases" | jq -c '.[] | select(.published_at > "'$START_DATE'T00:00:00Z" and .published_at < "'$END_DATE'T23:59:59Z") | {name: .name, commit: .target_commitish}'
-        done > output.txt
+            # Extract commit date and message
+            commit_date=$(echo "$commit_info" | jq -r '.commit.committer.date')
+            commit_message=$(echo "$commit_info" | jq -r '.commit.message')
+        
+            # Check if the commit is within the last 7 days
+            if [[ "$commit_date" > "$START_DATE" && "$commit_date" < "$END_DATE" ]]; then
+                # Add repo link and commit message to the README in markdown format
+                echo "- [**$repo**](https://github.com/$repo)" >> README.md
+                echo "    - *$commit_message*" >> README.md
+                echo "" >> README.md
+            fi
+        done
 
-        # # Fetch the list of repositories you've starred
-        # starred_repos=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/user/starred")
-        
-        # # Extract full names (e.g., "user/repo") of these repositories
-        # REPOS=($(echo "$starred_repos" | jq -r '.[] | .full_name'))
-        
-        # # Now loop through these repositories to check for releases
-        # for repo in "${REPOS[@]}"; do
-        #     echo "Checking releases for $repo..."
-            
-        #     # Fetch releases for the repo
-        #     releases=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/releases")
-        
-        #     # Parse releases and check date
-        #     echo "$releases" | jq -c '.[] | select(.published_at > "'$START_DATE'T00:00:00Z" and .published_at < "'$END_DATE'T23:59:59Z") | {name: .name, commit: .target_commitish}'
-        # done > output.txt
+
 
 
     - name: Commit the release information

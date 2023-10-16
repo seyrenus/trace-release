@@ -1,6 +1,7 @@
 name: Tracker New Releases
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'  # Runs daily at 00:00 UTC
 

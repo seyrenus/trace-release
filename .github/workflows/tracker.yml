@@ -21,12 +21,27 @@ jobs:
         START_DATE=$(date -d "$END_DATE - 7 days" +"%Y-%m-%d")
 
         echo "Checking releases from $START_DATE to $END_DATE..."
-
-        # Fetch the list of repositories you've starred
-        starred_repos=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/user/starred")
+        # Initialize an empty array to hold all starred repositories
+      
+        REPOS=()
         
-        # Extract full names (e.g., "user/repo") of these repositories
-        REPOS=($(echo "$starred_repos" | jq -r '.[] | .full_name'))
+        # Use a loop to paginate through all the results
+        page=1
+        while : ; do
+            # Fetch the list of repositories you've starred for the current page
+            starred_repos=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/user/starred?per_page=100&page=$page")
+        
+            # Exit loop if no results are returned
+            if [ "$(echo "$starred_repos" | jq -r '. | length')" -eq 0 ]; then
+                break
+            fi
+        
+            # Extract full names (e.g., "user/repo") of these repositories and add them to REPOS array
+            REPOS+=($(echo "$starred_repos" | jq -r '.[] | .full_name'))
+        
+            # Move to the next page
+            ((page++))
+        done
         
         # Now loop through these repositories to check for releases
         for repo in "${REPOS[@]}"; do
@@ -38,6 +53,23 @@ jobs:
             # Parse releases and check date
             echo "$releases" | jq -c '.[] | select(.published_at > "'$START_DATE'T00:00:00Z" and .published_at < "'$END_DATE'T23:59:59Z") | {name: .name, commit: .target_commitish}'
         done > output.txt
+
+        # # Fetch the list of repositories you've starred
+        # starred_repos=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/user/starred")
+        
+        # # Extract full names (e.g., "user/repo") of these repositories
+        # REPOS=($(echo "$starred_repos" | jq -r '.[] | .full_name'))
+        
+        # # Now loop through these repositories to check for releases
+        # for repo in "${REPOS[@]}"; do
+        #     echo "Checking releases for $repo..."
+            
+        #     # Fetch releases for the repo
+        #     releases=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/releases")
+        
+        #     # Parse releases and check date
+        #     echo "$releases" | jq -c '.[] | select(.published_at > "'$START_DATE'T00:00:00Z" and .published_at < "'$END_DATE'T23:59:59Z") | {name: .name, commit: .target_commitish}'
+        # done > output.txt
 
 
     - name: Commit the release information

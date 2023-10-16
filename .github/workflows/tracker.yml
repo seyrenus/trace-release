@@ -60,7 +60,9 @@ jobs:
             if [[ "$commit_date" > "$START_DATE" && "$commit_date" < "$END_DATE" ]]; then
                 # Add repo link and commit message to the README in markdown format
                 echo "- [**$repo**](https://github.com/$repo)" >> README.md
-                echo "    - *$commit_message*" >> README.md
+                formatted_commit_message=$(echo "$commit_message" | tr '\n' ' ')
+
+                echo "    - *$formatted_commit_message*" >> README.md
                 echo "" >> README.md
             fi
         done

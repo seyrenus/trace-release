@@ -47,27 +47,30 @@ jobs:
         # Now loop through these repositories to get the last commit message
         for repo in "${REPOS[@]}"; do
             echo "Fetching last commit for $repo..."
-            
+
             # Fetch the latest commit from the default branch
-            commit_info=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/commits/master")  # Assuming "master" is the default branch. Adjust if using "main" or another branch.
-        
-            # Extract commit date and message
-            commit_date=$(echo "$commit_info" | jq -r '.commit.committer.date')
-            commit_message=$(echo "$commit_info" | jq -r '.commit.message')
-        
-            # Check if the commit is within the last 7 days
-            if [[ "$commit_date" > "$START_DATE" && "$commit_date" < "$END_DATE" ]]; then
-                # Add repo link and commit message to the README in markdown format
-                echo "- [**$repo**](https://github.com/$repo)" >> README.md
-                formatted_commit_message=$(echo "$commit_message" | tr '\n' ' ')
+            # commit_info=$(curl -H "Authorization: token $GH_API_TOKEN" "https://api.github.com/repos/$repo/commits/master")  # Assuming "master" is the default branch. Adjust if using "main" or another branch.
+            # release_data=$(curl -H "Authorization: token $GH_API_TOKEN" -s "https://api.github.com/repos/$repo/releases/latest")
+            release_data=$(curl -H "Authorization: token $GH_API_TOKEN" -s -o release.json -w "%{http_code}" "https://api.github.com/repos/$repo/releases/latest")
 
-                echo "    - *$formatted_commit_message*" >> README.md
-                echo "" >> README.md
+            if [ "$release_data" != "404" ]; then
+                release_date=$(cat release.json | jq -r '.published_at')
+                release_commit=$(cat release.json | jq -r '.body')
+                
+                if [[ "$release_date" > "$START_DATE" && "$release_date" < "$END_DATE" ]]; then
+                    # Add repo link and commit message to the README in markdown format
+                    echo "- [**$repo**](https://github.com/$repo)" >> README.md
+                    formatted_commit_message=$(echo "$release_commit" | tr '\n' ' ')
+
+                    echo "    - *$formatted_commit_message*" >> README.md
+                    echo "" >> README.md
+                fi
             fi
+            # Extract commit date and message
+            # commit_date=$(echo "$release_data" | jq -r '.commit.committer.date')
+            # commit_message=$(echo "$release_data" | jq -r '.commit.message')
+            
         done
-
-
-
 
     - name: Commit the release information
       run: |

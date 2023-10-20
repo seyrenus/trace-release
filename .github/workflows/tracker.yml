@@ -63,7 +63,7 @@ jobs:
                     formatted_commit_message=$(echo "$release_commit" | tr '\n' ' ')
                     echo "" >> README.md
                     echo "```" >> README.md
-                    echo " $formatted_commit_message" >> README.md
+                    echo " *$formatted_commit_message*" >> README.md
                     echo "```" >> README.md
                     echo "" >> README.md
                 fi

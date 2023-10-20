@@ -69,7 +69,7 @@ Rebased to 118.0.5993.65.
 ### [**1Panel-dev/1Panel**](https://github.com/1Panel-dev/1Panel)
 
 ```
-# 一、安装和升级  ## 1.1 一键安装  **CentOS/RHEL**  ```sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sh quick_start.sh ```  **Ubuntu**  ```sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh ```  **Debian**  ```sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && bash quick_start.sh ```  ## 1.2 在线升级  登录 1Panel Web 控制台，在页面右下角点击 **【检查更新】** 进行在线升级。  >更多信息请查阅在线文档：https://1panel.cn/docs/  # 二、更新日志  # 2.1 功能优化  * 【容器】编辑容器页面增加部分提示信息。 by @ssongliu in https://github.com/1Panel-dev/1Panel/pull/2529  # 2.2 问题修复  * 【网站】修复了证书详情页面其他域名一直为空的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2542 * 【网站】修复了部分反向代理网站在 Firefox 浏览器中打开失败的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2525 * 【容器】修复了部分容器无法打开编辑页面的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2554  # 2.3 应用商店  * JumpServer 版本升级至 v3.7.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/487 * WordPress 版本升级至 v6.3.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/490 * frps 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/489 * frpc 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/488 * MeiliSearch 版本升级至 v1.4.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/486 
+# 一、安装和升级  ## 1.1 一键安装  **CentOS/RHEL**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sh quick_start.sh   **Ubuntu**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh   **Debian**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && bash quick_start.sh   ## 1.2 在线升级  登录 1Panel Web 控制台，在页面右下角点击 **【检查更新】** 进行在线升级。  >更多信息请查阅在线文档：https://1panel.cn/docs/  # 二、更新日志  # 2.1 功能优化  * 【容器】编辑容器页面增加部分提示信息。 by @ssongliu in https://github.com/1Panel-dev/1Panel/pull/2529  # 2.2 问题修复  * 【网站】修复了证书详情页面其他域名一直为空的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2542 * 【网站】修复了部分反向代理网站在 Firefox 浏览器中打开失败的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2525 * 【容器】修复了部分容器无法打开编辑页面的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2554  # 2.3 应用商店  * JumpServer 版本升级至 v3.7.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/487 * WordPress 版本升级至 v6.3.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/490 * frps 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/489 * frpc 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/488 * MeiliSearch 版本升级至 v1.4.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/486 
 ```
 
 ### [**LazyVim/LazyVim**](https://github.com/LazyVim/LazyVim)
@@ -111,7 +111,7 @@ Rebased to 118.0.5993.65.
 ### [**nxtrace/NTrace-core**](https://github.com/nxtrace/NTrace-core)
 
 ```
-增加--file参数支持文件读取列表进行路由测试 ```shell nexttrace --file /path/to/your/iplist.txt ``` 
+增加--file参数支持文件读取列表进行路由测试 shell nexttrace --file /path/to/your/iplist.txt  
 ```
 
 ### [**Binaryify/OneDark-Pro**](https://github.com/Binaryify/OneDark-Pro)

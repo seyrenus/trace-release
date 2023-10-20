@@ -1,0 +1,33 @@
+name: Check Starred Repos
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # This will run the job daily at midnight
+
+jobs:
+  check_releases:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check starred repos for new releases
+      run: |
+        curl -H "Authorization: token ${{ secrets.GH_API_TOKEN  }}" https://api.github.com/user/starred > starred_repos.json
+        for repo in $(cat starred_repos.json | jq -r '.[].full_name'); do
+          last_week=$(date --date="7 days ago" +%Y-%m-%dT%H:%M:%SZ)
+          
+          release_data=$(curl -H "Authorization: token ${{ secrets.GH_TOKEN }}" -s "https://api.github.com/repos/$repo/releases/latest")
+          
+          # Check if the returned data is not an empty array
+          if [ "$release_data" != "[]" ]; then
+              release_date=$(echo $release_data | jq -r '.published_at')
+              release_commit=$(echo $release_data | jq -r '.target_commitish')
+              
+              if [[ "$release_date" > "$last_week" ]]; then
+                  echo "Repository: $repo"
+                  echo "Release Commit: $release_commit"
+              fi
+          fi
+        done

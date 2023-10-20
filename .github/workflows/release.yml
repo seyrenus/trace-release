@@ -1,6 +1,7 @@
 name: Check Starred Repos
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * 0'  # This will run the job daily at midnight
 

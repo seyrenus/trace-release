@@ -1,11 +1,5 @@
 # Repositories with Latest Commits within 7 days
 
-### 2023-10-13T06:42:24Z [**fishjar/kiss-translator**](https://github.com/fishjar/kiss-translator)
-
-```
-更新内容：  - 移除多余的`wrangler`依赖 - 增加源语言远程识别功能（基于百度翻译接口）   - 之前仅扩展版能够本地语言识别，且准确率较低   - 启用远程识别后能增加语言识别准确性，但会降低翻译速度   - 可在设置页面酌情启用或禁用 - 修正`openai`的默认接口地址 - 更新`readme`描述 - 其他一些小修改 
-```
-
 ### 2023-10-16T15:38:22Z [**guozhigq/pilipala**](https://github.com/guozhigq/pilipala)
 
 ```
@@ -30,12 +24,6 @@
  ### Maintenance  * Update plugin commits to most recent commits   **Full Changelog**: https://github.com/AstroNvim/AstroNvim/compare/v3.37.6...v3.37.7 
 ```
 
-### 2023-10-13T15:49:37Z [**mozilla-mobile/firefox-android**](https://github.com/mozilla-mobile/firefox-android)
-
-```
-null 
-```
-
 ### 2023-10-17T04:43:27Z [**cppla/ServerStatus**](https://github.com/cppla/ServerStatus)
 
 ```
@@ -48,28 +36,28 @@ null
 feat: support hotswap #104 refactor: use input arguments to parse lib home #106 feat: add docker file #108 support docker push and native image #109 
 ```
 
-### 2023-10-14T04:03:12Z [**klzgrad/naiveproxy**](https://github.com/klzgrad/naiveproxy)
+### 2023-10-20T16:19:30Z [**TodePond/DreamBerd**](https://github.com/TodePond/DreamBerd)
 
 ```
-Rebased to 118.0.5993.65. 
+Hello investors and stake-holders (and community).  Today on this very day we announce our highly successful pre-seed round.  *We're the best!* Please remember that.  ## The damage    A whopping 42 of you invested a total of £460.18 in the DreamBerd Foundation. As promised, all your money has gone towards fighting conversion therapy.  *We're against conversion in all its forms, whether that's implicitly interpreting a number as a string, or [making a trans person kill themselves](https://www.mind.org.uk/news-campaigns/news/it-can-completely-destroy-a-person-how-mind-plans-to-make-mps-understand-the-devastating-effects-of-conversion-therapy/).*  As such, we've now donated **£460.18 to the [Stonewall charity](https://www.stonewall.org.uk/our-work/campaigns/ban-conversion-therapy)**. Thank you for making this possible!    For full transparency, we've posted up [full anonymised info](https://github.com/TodePond/DreamBerd/tree/main/docs/investment/pre-seed) about the fundraise. Keep us honest by checking that your investment has been included! Unfortunately the [sweet wrapper deal](https://github.com/TodePond/DreamBerd/releases/tag/v181.81#fn-1) fell through due to logistical issues.  ## The moment  Did you miss a chance to invest? Don't worry! Nothing is stopping you from [donating directly to Stonewall](https://donorbox.org/support-stonewall) right now. Or if you prefer, simply find your nearest queer person, and ask for advice on how to help.  If you don't know any queer people then maybe you should.  ## The future  The internet is a strange place. It brings out the best and worst in people, myself included. What does it bring out in you?  See you next week, Lu x  <img width="1094" alt="image" src="https://github.com/TodePond/DreamBerd/assets/15892272/c8e87508-8c16-4f3d-a1b8-6c2387c3f67e"> 
 ```
 
-### 2023-10-15T05:06:09Z [**pot-app/pot-desktop**](https://github.com/pot-app/pot-desktop)
+### 2023-10-20T16:29:40Z [**imartinez/privateGPT**](https://github.com/imartinez/privateGPT)
 
 ```
-## 2.6.4 (2023-10-15)  ### New feature:  -   Support Select Component for Plugin([`37eb8d9`](https://github.com/pot-app/pot-desktop/commit/37eb8d93c44f9cd42abf92eb92ac774187f7f78b)) (by @Pylogmon) -   Support More App Language([`b2acd35`](https://github.com/pot-app/pot-desktop/commit/b2acd35b98c8416d32fdcebd7540623c9b03779c)) (by @Pylogmon)  ### Bugs fixed:  -   Fix Styles([`e5789cd`](https://github.com/pot-app/pot-desktop/commit/e5789cd9abfdd798178f4a4a420327ff3c69a0c7)) (by @Pylogmon) 
+## [0.0.2](https://github.com/imartinez/privateGPT/compare/v0.0.1...v0.0.2) (2023-10-20)   ### Bug Fixes  * chromadb max batch size ([#1087](https://github.com/imartinez/privateGPT/issues/1087)) ([f5a9bf4](https://github.com/imartinez/privateGPT/commit/f5a9bf4e374b2d4c76438cf8a97cccf222ec8e6f)) 
+```
+
+### 2023-10-21T06:56:12Z [**pot-app/pot-desktop**](https://github.com/pot-app/pot-desktop)
+
+```
+## 2.6.5 (2023-10-21)  ### New feature:  -   Add PluginList Button([`0d7b449`](https://github.com/pot-app/pot-desktop/commit/0d7b44918a996e5c7e8300831fda6fb68761d3c4)) (by @Pylogmon) -   Support Windows aarch64([`4bd009e`](https://github.com/pot-app/pot-desktop/commit/4bd009e6a81caad5d4861d81d5c4af623a84e3bc)) (by @Pylogmon) -   Support nb_NO and nn_NO([`d9c7bfe`](https://github.com/pot-app/pot-desktop/commit/d9c7bfe6a888b124a7204c5d4db4ebcccaa2d344)) (by @Pylogmon)  ### Bugs fixed:  -   Remove prefix and suffix spaces([`ef2bfaf`](https://github.com/pot-app/pot-desktop/commit/ef2bfaf3e76da38cb4917f76e2bb4c3924cf67e4)) (by @Pylogmon) -   Auto Close Window on Gnome([`0a24e85`](https://github.com/pot-app/pot-desktop/commit/0a24e85e134b573c160cb025fb66763863d2daff)) (by @Pylogmon) -   Remove Space of System OCR([`5c1bf0b`](https://github.com/pot-app/pot-desktop/commit/5c1bf0b29e5fcac86c46f25975cb9119af9a2672)) (by @Pylogmon) 
 ```
 
 ### 2023-10-16T03:20:51Z [**kylelin1998/RssMonitorTelegramBot**](https://github.com/kylelin1998/RssMonitorTelegramBot)
 
 ```
 更新内容： 1. 优化整体按钮交互， 尽量减少发送新消息来完成设置交互操作 2. 新增关键词排除不推送， 支持包含关键词和正则匹配，文本中含有指定文本将不推送消息 关键词排除功能使用 /admin 命令进行设置  ---  Updated content: 1. Optimize overall button interactions to minimize the need for sending new messages to complete setup interactions. 2. Add keyword exclusion for push notifications, supporting both keyword and regex matching. Messages containing specified text will not be pushed. The keyword exclusion feature can be set using the /admin command. 
-```
-
-### 2023-10-14T16:49:51Z [**1Panel-dev/1Panel**](https://github.com/1Panel-dev/1Panel)
-
-```
-# 一、安装和升级  ## 1.1 一键安装  **CentOS/RHEL**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sh quick_start.sh   **Ubuntu**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh   **Debian**  sh curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && bash quick_start.sh   ## 1.2 在线升级  登录 1Panel Web 控制台，在页面右下角点击 **【检查更新】** 进行在线升级。  >更多信息请查阅在线文档：https://1panel.cn/docs/  # 二、更新日志  # 2.1 功能优化  * 【容器】编辑容器页面增加部分提示信息。 by @ssongliu in https://github.com/1Panel-dev/1Panel/pull/2529  # 2.2 问题修复  * 【网站】修复了证书详情页面其他域名一直为空的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2542 * 【网站】修复了部分反向代理网站在 Firefox 浏览器中打开失败的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2525 * 【容器】修复了部分容器无法打开编辑页面的问题。 by @zhengkunwang223 in https://github.com/1Panel-dev/1Panel/pull/2554  # 2.3 应用商店  * JumpServer 版本升级至 v3.7.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/487 * WordPress 版本升级至 v6.3.2。 by @renovate in https://github.com/1Panel-dev/appstore/pull/490 * frps 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/489 * frpc 版本升级至 v0.52.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/488 * MeiliSearch 版本升级至 v1.4.1。 by @renovate in https://github.com/1Panel-dev/appstore/pull/486 
 ```
 
 ### 2023-10-19T18:15:32Z [**LazyVim/LazyVim**](https://github.com/LazyVim/LazyVim)
@@ -84,13 +72,19 @@ Rebased to 118.0.5993.65.
 ## Features - Add claude-v2 API (#516) [#516](https://github.com/josStorer/chatGPTBox/pull/516) ([ajkost](https://github.com/josStorer/chatGPTBox/commit/157399694aa5adcafdc7886d42f05ef4e3899df6))  ## Patches - d639d29: upgrade bing client (merge https://github.com/waylaidwanderer/node-chatgpt-api/pull/481) and some other adaptations (#505, #519, #525) (josc146)  ## Bug Fixes - under chatgpt web mode, due to API changes, stored responses became `undefined` ([josc146](https://github.com/josStorer/chatGPTBox/commit/634c9c95a4411c520c10258fca7c44cb9384a59e))  ## Chores - **deps**: bump actions/checkout from 3 to 4 [#507](https://github.com/josStorer/chatGPTBox/pull/507) ([dependabot[bot]](https://github.com/josStorer/chatGPTBox/commit/1e1d7db8aabc84e4a5f40fa6db37df08273ed27b)) - 83f44a3: improve claude api prompt (#516) (josc146) - b1b9c6a: Added Turkish Support, Create _locales/tr/main.json (Only1337) [#518](https://github.com/josStorer/chatGPTBox/pull/518) - c152d0b: update kagi query (#517) (josc146) - 96a0361: update locales (josc146) - 67febe3: Add site adapter for FAZ (Frankfurter Allgemeine Zeitung) (Martin Richtarsky) [#520](https://github.com/josStorer/chatGPTBox/pull/520) - 62e8c3b: fix firefox warning (#527) (josc146) - 843bfc3: update bing detection (josc146) - 4cc4144: improve claude.ai login prompt (josc146) - 86b9b20: improve error prompt (josc146) - adf95b3: release v2.4.1 (github-actions[bot]) - efe83f2: chore (josc146)  ## Known Issues - ChatGPT-4 Web Mode is not working, you have to use API Mode (#469, `arkose_token` is required, but i haven't found an efficient way to get it on client side) - Poe AI is not working (See more in https://github.com/ading2210/poe-api/issues/218 and https://github.com/ading2210/poe-api/issues/231) (Related: #471, #476, #495, #496) 
 ```
 
+### 2023-10-21T00:32:33Z [**chatchat-space/Langchain-Chatchat**](https://github.com/chatchat-space/Langchain-Chatchat)
+
+```
+# Langchain-Chatchat v0.2.6 现已上线  ##  ️ ⚠ 重要提示  Langchain-Chatchat v0.2.6 版本中修改了 configs 中配置项，建议所有用户按照 Wiki 的 开发部署  中的相关描述重新完成项目中的配置文件生成。开发部署过程遇到问题请先到 Github Wiki / issues 中搜索。  此外，v0.2.6 版本中知识库相关信息的数据库表发生了变化，需重建知识库。  本次更新中依赖 Python 包与其版本发生了更新，请使用 pip install -r requirements.txt 进行更新。  ## 🛠 新增功能  - 支持百川在线模型 (@hzg0601 @liunux4odoo in #1623) - 支持 Azure OpenAI 与 claude 等 Langchain 自带模型 (@zRzRzRzRzRzRzR in #1808) - Agent 功能大量更新，支持更多的工具、更换提示词、检索知识库 (@zRzRzRzRzRzRzR in #1626 #1666 #1785) - 加长 32k 模型的历史记录 (@zRzRzRzRzRzRzR in #1629 #1630) - *_chat 接口支持 max_tokens 参数 (@liunux4odoo in #1744) - 实现 API 和 WebUI 的前后端分离 (@liunux4odoo in #1772) - 支持 zlilliz 向量库 (@zRzRzRzRzRzRzR in #1785) - 支持 metaphor 搜索引擎 (@liunux4odoo in #1792) - 支持 p-tuning 模型 (@hzg0601 in #1810) - 更新完善文档和 Wiki (@imClumsyPanda @zRzRzRzRzRzRzR @glide-the in #1680 #1811)  ## 🐞 问题修复  - 修复 bge-* 模型匹配超过 1 的问题 (@zRzRzRzRzRzRzR in #1652) - 修复系统代理为空的问题 (@glide-the in #1654) - 修复重建知识库时 `d == self.d assert error` (@liunux4odoo in #1766) - 修复对话历史消息错误 (@liunux4odoo in #1801) - 修复 OpenAI 无法调用的 bug (@zRzRzRzRzRzRzR in #1808) - 修复 windows下 BIND_HOST=0.0.0.0 时对话出错的问题 (@hzg0601 in #1810)  ## New Contributors * @qiankunli made their first contribution in https://github.com/chatchat-space/Langchain-Chatchat/pull/1501 * @yihleego made their first contribution in https://github.com/chatchat-space/Langchain-Chatchat/pull/1534 * @WilliamChen-luckbob made their first contribution in https://github.com/chatchat-space/Langchain-Chatchat/pull/1585  ## 欢迎贡献  有好的建议可以通过 PR 给项目贡献代码。具体见 Wiki 贡献篇。 除了贡献代码，也可以提交文本分词用例，帮助项目实现更好的分词效果。具体见  #1374   **Full Changelog**: https://github.com/chatchat-space/Langchain-Chatchat/compare/v0.2.5...v0.2.6 
+```
+
 ### 2023-10-15T15:13:41Z [**nova-video-player/aos-AVP**](https://github.com/nova-video-player/aos-AVP)
 
 ```
 - Update jcifs-ng to 2.1.10, commons-net to 3.10.0, sshj to 0.37.0  /!\ Please test if this release breaks ftp on firestick4k (not the max version) cf. https://github.com/nova-video-player/aos-AVP/issues/829 
 ```
 
-### 2023-10-19T22:37:07Z [**Loyalsoldier/clash-rules**](https://github.com/Loyalsoldier/clash-rules)
+### 2023-10-21T22:37:03Z [**Loyalsoldier/clash-rules**](https://github.com/Loyalsoldier/clash-rules)
 
 ```
  
@@ -102,10 +96,16 @@ Rebased to 118.0.5993.65.
 ## What's Changed * Update DEFAULT_FILES_TO_IGNORE with new lock files by @zurawiki in https://github.com/zurawiki/gptcommit/pull/248   **Full Changelog**: https://github.com/zurawiki/gptcommit/compare/v0.5.13...v0.5.14 
 ```
 
-### 2023-10-19T15:46:30Z [**LlmKira/Openaibot**](https://github.com/LlmKira/Openaibot)
+### 2023-10-21T20:01:11Z [**composerize/composerize**](https://github.com/composerize/composerize)
 
 ```
-# ⚒Attention  We fixed a forensic issue and recommend you update to this version after! 我们修复了一个鉴权问题，推荐您更新到此版本之后！  ## 🔨Fix  - [x] Fix a secure bug  ## Change  - [X] Better Schema - [X] Better Prompt  ## What's Changed * Change To Apache License by @sudoskys in https://github.com/LlmKira/Openaibot/pull/285 * Media Converter by @sudoskys in https://github.com/LlmKira/Openaibot/pull/286 * Discord Pair by @sudoskys in https://github.com/LlmKira/Openaibot/pull/287   **Full Changelog**: https://github.com/LlmKira/Openaibot/compare/lib0.25.2...lib0.25.3 
+## What's Changed * Add support for **all flags** of docker run * Support `docker run`, `docker create`, `docker container run`, `docker service create` * Handle `docker run` commands with *command line arguments* * Handle **multiple** commands * Handle *merging* with existing `Docker compose` file * Correction of all most all previously opened issues * Mention reverse tool : [decomposerize.com](http://decomposerize.com/)  By @sharevb in https://github.com/composerize/composerize/pull/571  ## New Contributors * @sharevb made their first contribution in https://github.com/composerize/composerize/pull/571  **Full Changelog**: https://github.com/magicmark/composerize/compare/v1.2.0...v1.4.1 
+```
+
+### 2023-10-21T15:37:11Z [**LlmKira/Openaibot**](https://github.com/LlmKira/Openaibot)
+
+```
+# ⚒ USER INTRO  Click Slack App Center:https://api.slack.com/apps/  `Signing Secret` at main page as `SLACK_SIGNING_SECRET` `App-Level Tokens` at main as `SLACK_APP_TOKEN` `Bot User OAuth Token` as `SLACK_BOT_TOKEN` at https://api.slack.com/apps/<appid>/oauth?  **GO https://app.slack.com/app-settings/..../...../socket-mode** - turn on the `Socket Mode`  **GO https://api.slack.com/apps/<app_id>/event-subscriptions** - ENABLE `Event Subscriptions` - Subscribe to events on behalf of users `message.channels`  `message.im`  `message.groups`  **GO https://api.slack.com/apps/...../oauth** - Bot Token Scopes `chat:write` `channels:read` `commands` `files:read` `files:write` `im:read` `im:history` `group:history` `im:write` `channel:write` `channel:history`   (Maybe some scope are extra...)  Reinstall APP,invite your bot to channel.... then  @/BOT/ ,ok  ## 🔨Fix  - [x] Fix kook   ## Change  - [X] simplify `Receiver` - [x] Just Fix Some SMALL BUG  ## Add  - [x] Plugin OpenAPI `file_match_required` as `re.compile` return |  `file_match_required` 属性排除相关插件  ## What's Changed * Slack Platform by @sudoskys in https://github.com/LlmKira/Openaibot/pull/297   **Full Changelog**: https://github.com/LlmKira/Openaibot/compare/lib0.25.4...lib0.25.5 
 ```
 
 ### 2023-10-19T16:51:30Z [**nxtrace/NTrace-core**](https://github.com/nxtrace/NTrace-core)
@@ -120,16 +120,10 @@ Rebased to 118.0.5993.65.
 - Update README.md 
 ```
 
-### 2023-10-14T19:12:39Z [**be5invis/Sarasa-Gothic**](https://github.com/be5invis/Sarasa-Gothic)
+### 2023-10-21T16:04:21Z [**be5invis/Sarasa-Gothic**](https://github.com/be5invis/Sarasa-Gothic)
 
 ```
-Release version: 0.42.2 
-```
-
-### 2023-10-13T10:47:12Z [**rustdesk/rustdesk**](https://github.com/rustdesk/rustdesk)
-
-```
- ![image](https://github.com/rustdesk/rustdesk/assets/71636191/83754a64-31b8-47f0-8570-da22207759a9)   > Winget, FDroid update will come soon.   x86-64: [Windows](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.exe) | [Ubuntu](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.deb) | [Mac](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-x86_64.dmg)  AArch64 (ARM64):  [Ubuntu](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-aarch64.deb) | [Android](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-aarch64-signed.apk) | [Mac](https://github.com/rustdesk/rustdesk/releases/download/1.2.3/rustdesk-1.2.3-aarch64.dmg)   More: [check below please](#)   <details>  <summary>Changelog</summary>  - Improve Wayland support, cursor/clipboard/multi-monitors etc, but highly depends on Xwayland, working well on GNOME, bad compatibility on KDE. We will continue working on Wayland - Add group tab - Add software update check based on github latest tag - Some fixes for Kaspersky compliance, https://github.com/rustdesk/rustdesk/discussions/5624, but they requested more - A lot of fixes since 1.2.2 - We are still working hard on dual-monitors-dual-windows and new hardware codecs, hopefully be in 1.2.4   </details> 
+Release version: 0.42.3 
 ```
 
 ### 2023-10-17T07:59:10Z [**TophantTechnology/ARL**](https://github.com/TophantTechnology/ARL)
@@ -150,16 +144,22 @@ Release version: 0.42.2
 ## [1.26.1](https://github.com/casibase/casibase/compare/v1.26.0...v1.26.1) (2023-10-17)   ### Bug Fixes  * fix ernie model request parameters ([#681](https://github.com/casibase/casibase/issues/681)) ([229f246](https://github.com/casibase/casibase/commit/229f2465c916856e17f78e1df682b7edb8c57b0b)) 
 ```
 
-### 2023-10-18T11:05:07Z [**theonedev/onedev**](https://github.com/theonedev/onedev)
+### 2023-10-21T09:39:18Z [**laurent22/joplin**](https://github.com/laurent22/joplin)
 
 ```
-## Installation Guide  https://docs.onedev.io/category/installation-guide  ## Change Log  https://code.onedev.io/onedev/server/~builds/4227/fixed-issues?query=%22State%22+is+%22Released%22+order+by+%22Type%22+asc+and+%22Priority%22+desc  ## Incompatibilities  https://code.onedev.io/onedev/server/~builds/4227/markdown/Incompatibilities/server-product/system/incompatibilities/incompatibilities.md 
+- Security: Update Electron to 25.9.0 (#9049 by Henry Heino) - Fixed: Fixed issues related to sharing notes on read-only notebooks (afaa2a7) 
 ```
 
-### 2023-10-19T11:01:39Z [**codota/tabnine-vscode**](https://github.com/codota/tabnine-vscode)
+### 2023-10-21T08:03:40Z [**theonedev/onedev**](https://github.com/theonedev/onedev)
 
 ```
- 
+## Installation Guide  https://docs.onedev.io/category/installation-guide  ## Change Log  https://code.onedev.io/onedev/server/~builds/4241/fixed-issues?query=%22State%22+is+%22Released%22+order+by+%22Type%22+asc+and+%22Priority%22+desc  ## Incompatibilities  https://code.onedev.io/onedev/server/~builds/4241/markdown/Incompatibilities/server-product/system/incompatibilities/incompatibilities.md 
+```
+
+### 2023-10-20T20:01:41Z [**coder/code-server**](https://github.com/coder/code-server)
+
+```
+Code v1.83.1  ### Changed  - Updated to Code 1.83.1. 
 ```
 
 ### 2023-10-15T19:01:50Z [**miniflux/v2**](https://github.com/miniflux/v2)
